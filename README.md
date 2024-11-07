@@ -1,8 +1,8 @@
-# FakeNewsClassification
+# 📰 FakeNewsClassification
 
 This project is focused on building a robust fake news classification model using a pre-trained DistilBERT transformer model, implemented with TensorFlow and fine-tuned on a labeled dataset. The classifier identifies whether a given text is fake or real news, handling imbalanced data and optimizing the model's performance.
 
-## Project Overview
+## 🎯 Project Overview
 
 - **Goal**: To classify news articles as either *fake* or *real*.
 - **Model**: Fine-tuned DistilBERT model.
@@ -12,11 +12,11 @@ This project is focused on building a robust fake news classification model usin
   - Hyperparameter tuning for improved precision and recall.
   - Jupyter Notebook processing for seamless integration with GitHub.
 
-## Files
+## 📂 Files
 - `notebook.ipynb` : Main notebook file containing data preprocessing, model training, and evaluation.
 - `README.md` : Project overview, usage instructions, and requirements.
 
-## Installation
+## 🛠️ Installation
 
 Clone the repository and install dependencies in a virtual environment.
 
@@ -28,7 +28,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Project Setup and Requirements
+## 🏗️ Project Setup and Requirements
 
 1. **Dependencies**: Required libraries include tensorflow, transformers, scikit-learn, imbalanced-learn, matplotlib, and seaborn. Install all with:
 
@@ -37,14 +37,14 @@ pip install tensorflow transformers scikit-learn imbalanced-learn matplotlib sea
 `
 3. **Dataset**: Download the dataset from Kaggle and place it in the root directory, or specify the correct path in notebook.ipynb.
 
-## Model Training and Evaluation
+## 🔍 Model Training and Evaluation
 
 1. **Data Preprocessing**: The text data is tokenized with the DistilBERT tokenizer, truncated to a maximum length of 100 tokens.
 2. **SMOTE and Class Weighting**: Applied to manage class imbalance, improving recall and precision.
 3. **Model Architecture**: Fine-tuned DistilBERT model with dropout layers for regularization.
 4. **Training**: The model is trained with balanced cross-entropy loss and an Adam optimizer.
 
-## Running the Notebook
+## 🚀 Running the Notebook
 
 Open the Jupyter Notebook to explore, train, and evaluate the model:
 
@@ -52,7 +52,7 @@ Open the Jupyter Notebook to explore, train, and evaluate the model:
 jupyter notebook notebook.ipynb
 `
 
-## Example Usage
+## 💻 Example Usage
 
 After training, load the saved model and make predictions as shown below:
 
@@ -74,7 +74,7 @@ logits = model.predict([inputs["input_ids"], inputs["attention_mask"]])
 print("Predicted class:", tf.argmax(logits, axis=1).numpy()[0])
 ```
 
-## Results
+## 📊 Results
 
 The model achieved a balanced accuracy of approximately 83% on the validation set. Performance can be improved with further tuning.
 
@@ -86,7 +86,7 @@ The model achieved a balanced accuracy of approximately 83% on the validation se
 | Recall    | 0.88     | 0.78     | 0.83     | 0.83     |
 | F1 Score  | 0.83     | 0.82     | 0.83     | 0.83     | 
 
-## Future Improvements
+## 🔮 Future Improvements
 
 - Experiment with other oversampling techniques.
 - Test additional transformer architectures for improved accuracy.
